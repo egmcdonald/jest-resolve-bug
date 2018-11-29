@@ -1,0 +1,9 @@
+{
+  "name": "jest-resolver-bug",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
