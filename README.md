@@ -5,8 +5,9 @@ A reproduction for a bug found in the default `jest` resolver ([`jest-resolve`](
 ## Reproduction steps
 
 1. Clone down this repo
-2. Delete the file `src/index.js`
-3. Run the command `npm run test-bug`
+2. Run `npm install`
+3. Delete the file `src/index.js`
+4. Run the command `npm run test-bug`
 
 The above run returns the following message:
 
