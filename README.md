@@ -1,6 +1,6 @@
 # jest-resolve-bug
 
-A reproduction for a bug found in the default `jest` resolver ([`jest-resolve`](https://github.com/facebook/jest/tree/master/packages/jest-resolve)).
+A reproduction for a bug found in the default `jest` resolver ([`jest-resolve`](https://github.com/facebook/jest/tree/master/packages/jest-resolve)). This repo accompanies [issue #7436](https://github.com/facebook/jest/issues/7436) in the `jest` repo.
 
 ## Reproduction steps
 
