@@ -1,7 +1,8 @@
 {
   "name": "jest-resolver-bug",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-bug": "jest --changedSince=origin/master"
   },
   "devDependencies": {
     "jest": "^23.6.0"
