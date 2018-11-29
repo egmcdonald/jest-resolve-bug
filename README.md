@@ -1,7 +1,9 @@
-# jest-resolver-bug
-A reproduction for a bug found in jest-resolver
+# jest-resolve-bug
+
+A reproduction for a bug found in the default `jest` resolver ([`jest-resolve`](https://github.com/facebook/jest/tree/master/packages/jest-resolve)).
 
 ## Reproduction steps
+
 1. Clone down this repo
 2. Delete the file `src/index.js`
 3. Run the command `npm run test-bug`
@@ -38,7 +40,9 @@ FAIL  src/index.spec.js
 At first I believed this was an issue to do with the `changedSince` command. Upon looking into how this CLI option operates (using the [`jest-changed-files` package](https://github.com/facebook/jest/tree/master/packages/jest-changed-files)), I ran the following command in a `node` repl in the root of the repo:
 
 ```js
-require(`jest-changed-files`).getChangedFilesForRoots([process.cwd()], {}).then(console.log);
+require(`jest-changed-files`)
+  .getChangedFilesForRoots([process.cwd()], {})
+  .then(console.log);
 ```
 
 and received the following output:
@@ -57,9 +61,9 @@ Promise {
      _maxListeners: undefined,
      members: [] } }
 > { changedFiles:
-   Set { '/Users/emilymcdonald/work/jest-resolver-bug/src/index.js' },
+   Set { '/Users/emilymcdonald/work/jest-resolve-bug/src/index.js' },
   repos:
-   { git: Set { '/Users/emilymcdonald/work/jest-resolver-bug' },
+   { git: Set { '/Users/emilymcdonald/work/jest-resolve-bug' },
      hg: Set {} } }
 ```
 
